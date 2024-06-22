@@ -16,47 +16,47 @@ public class Application
     private String description;
     private LocalDate submiDate;
 
-    public Long GetId(){
+    public Long getId(){
         return this.id;
     }
 
-    public String GetTitle(){
+    public String getTitle(){
         return title;
     }
 
-    public String GetCompany(){
+    public String getCompany(){
         return company;
     }
 
-    public String GetLocation(){
+    public String getLocation(){
         return location;
     }
 
-    public String GetDescription(){
+    public String getDescription(){
         return description;
     }
 
-    public LocalDate GetSubmitDate(){
+    public LocalDate getSubmitDate(){
         return submiDate;
     }
 
-    public void SetTitle(String title){
+    public void setTitle(String title){
         this.title = title;
     }
 
-    public void SetCompany(String company){
+    public void setCompany(String company){
         this.company = company;
     }
 
-    public void SetLocation(String location){
+    public void setLocation(String location){
         this.location = location;
     }
 
-    public void SetDescription(String description){
+    public void setDescription(String description){
         this.description = description;
     }
 
-    public void SetSubmiDate(LocalDate submiDate){
+    public void setSubmiDate(LocalDate submiDate){
         this.submiDate = submiDate;
     }
 

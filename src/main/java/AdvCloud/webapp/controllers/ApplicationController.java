@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import AdvCloud.webapp.dto.ApplicationDTO;
 import AdvCloud.webapp.model.Application;
+
+import java.time.LocalDate;
 import java.util.List;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,11 +36,13 @@ public class ApplicationController {
     @PostMapping
     public Application createApplication(@RequestBody ApplicationDTO applicationDTO) {
         Application application = new Application();
-        System.out.println(applicationDTO.GetTitle());
-        application.SetTitle(applicationDTO.GetTitle());
-        application.SetCompany(applicationDTO.GetCompany());
-        application.SetDescription(applicationDTO.GetDescription());
-        application.SetLocation(applicationDTO.GetLocation());
+        System.out.println(applicationDTO.getTitle());
+        application.setTitle(applicationDTO.getTitle());
+        application.setCompany(applicationDTO.getCompany());
+        application.setDescription(applicationDTO.getDescription());
+        application.setLocation(applicationDTO.getLocation());
+        application.setSubmiDate(LocalDate.now());
+        System.out.println(application.getTitle());
         return service.saveApplication(application);
     }
     
