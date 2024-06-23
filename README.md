@@ -15,6 +15,11 @@
 - docker build --platform linux/amd64 -t webapp .
 - Run the container
 - docker run -p 8080:8080 -t webapp
+- Deploy the kubernete service and deployment
+- kubectl apply -f deployment.yaml
+- kubectl apply -f service.yaml
+- Collect information regarding the pod
+- kubectl describe pod 'podname'
 
 
 ### Reference
