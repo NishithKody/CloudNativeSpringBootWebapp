@@ -1,0 +1,19 @@
+list images
+docker images
+
+build docker image 
+docker build ./
+
+run the image
+docker run -p <externalPort>:<IntervalPort> <imagename>
+
+cmd vs entrypoint
+entrypoint is used to get a argument from the user
+
+in cmd, the command line parameters replace it completely
+in entrypoint the command line parameters append it
+
+we can use entrypoint and cmd for a image which takes in a argument and has a default value
+
+entrypoint ["sleep"]
+cmd ["5"]

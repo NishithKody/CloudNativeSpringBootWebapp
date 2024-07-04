@@ -1,12 +1,18 @@
 pods-
 get all pods
 kubectl get pods
+create a pod
+kubectl run <podname> --image=<imagename>
 get pod details
 kubectl describe pod <podname>
 delete pod
 kubectl delete pod <podname>
+edit pod
+kubectl edit pod <podname>
 If you are not given a pod definition file, you may extract the definition to a file using the below command:
 kubectl get pod <pod-name> -o yaml > pod-definition.yaml
+create pod from file
+kubectl apply -f <filename>
 
 replicaset
 get replica sets
@@ -22,3 +28,31 @@ kubectl edit -f <filename>
 
 deployment
 'same as replicaset'
+scale deployment
+kubectl scale deployment <deploymentname> --replicas=4
+
+namespace
+to view a particular namespace
+kubectl get pods --namespace=dev
+all namespace
+kubectl get pods --all-namespaces
+
+imperative command tips
+--dry-run=client : does not create the resources, tells you whether resource can be created and if your command is right.
+-o yaml: This will output the resource definition in YAML format on the screen.
+
+Use the above two in combination along with Linux output redirection to generate a resource definition file quickly, that 
+you can then modify and create resources as required, instead of creating the files from scratch.
+
+kubectl run nginx --image=nginx --dry-run=client -o yaml > nginx-pod.yaml
+
+configMap 
+It is used to provide key value pairs
+kubectl create configmap (imperative)
+kubectl create -f (declarative)
+kubectl get configmap
+kubectl describe configmaps
+
+service
+create a service for a pod (in this way, the selector of the pod are used)
+kubectl expose pod redis --name=redis=service --port=6379
