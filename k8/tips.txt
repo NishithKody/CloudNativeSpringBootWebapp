@@ -1,0 +1,24 @@
+pods-
+get all pods
+kubectl get pods
+get pod details
+kubectl describe pod <podname>
+delete pod
+kubectl delete pod <podname>
+If you are not given a pod definition file, you may extract the definition to a file using the below command:
+kubectl get pod <pod-name> -o yaml > pod-definition.yaml
+
+replicaset
+get replica sets
+kubectl get replicaset
+delete replica set
+kubectl delete replicaset <name>
+create replica set
+kubectl create -f <filename>
+details of the replicaset
+kubectl describe replicaset <name>
+update the replicaset
+kubectl edit -f <filename>
+
+deployment
+'same as replicaset'
