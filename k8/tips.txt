@@ -13,6 +13,10 @@ If you are not given a pod definition file, you may extract the definition to a 
 kubectl get pod <pod-name> -o yaml > pod-definition.yaml
 create pod from file
 kubectl apply -f <filename>
+execute a command in a container
+kubectl exec <podname> -- <command>
+get a specific pod
+kubectl get pod <name>
 
 replicaset
 get replica sets
@@ -52,6 +56,42 @@ kubectl create configmap (imperative)
 kubectl create -f (declarative)
 kubectl get configmap
 kubectl describe configmaps
+
+secret
+kubectl create secret generic <name>
+
+security context (under the spec)
+used to provide user instead
+eg - securityContext:
+        runAsUser: 1000
+
+we can add capabilities also (only pod level)
+Q - what is the user to execute the sleep process within the ubuntu-sleeper pod
+A - kubectl exec ubuntu-sleeper -- whoami
+
+taints and tolerations
+kubectl taint node <node-name> key=value:taint-effect
+eg- 
+kubectl taint node node1 app=blue:NoSchedule
+to add tolerations, add this under specs (pod)
+tolerations:
+- key: "app"
+  operation: "Equal"
+  value: "blue"
+  effect: "NoSchedule"
+
+service accounts
+kubectl create serviceaccount <name>
+remove taint
+kubectl taint node <node-name> key=value:taint-effect-
+(note the minus sign at the end)
+
+Node selector
+label node-
+kubectl label nodes <node-name> <label-key>=<label-value>
+
+Node affinity
+
 
 service
 create a service for a pod (in this way, the selector of the pod are used)
