@@ -96,3 +96,8 @@ Node affinity
 service
 create a service for a pod (in this way, the selector of the pod are used)
 kubectl expose pod redis --name=redis=service --port=6379
+
+
+check logs
+k logs <podname>
+
