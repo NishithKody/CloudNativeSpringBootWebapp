@@ -8,3 +8,5 @@ Rollouts
 k rollout status <deployment>
 
 k rollout history <deployment>
+
+k rollout undo  <deployment>
