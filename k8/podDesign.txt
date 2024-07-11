@@ -1,0 +1,10 @@
+get a pod with a specific label
+kubectl get pods --selector <key>=<value> (note there is a space betweeen the options and the key value pair)
+
+annotations are used to save other information such as tool details,
+build information 
+
+Rollouts
+k rollout status <deployment>
+
+k rollout history <deployment>

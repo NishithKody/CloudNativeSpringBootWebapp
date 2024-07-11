@@ -100,4 +100,9 @@ kubectl expose pod redis --name=redis=service --port=6379
 
 check logs
 k logs <podname>
+check the logs live
+k log -f <podname>
+if multiple containers
+k log -f <podname> <containerName>
+
 
