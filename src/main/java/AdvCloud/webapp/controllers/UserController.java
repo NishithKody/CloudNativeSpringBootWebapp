@@ -1,30 +1,33 @@
 package AdvCloud.webapp.controllers;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.ArrayList;
-import java.util.List;
-import org.springframework.web.bind.annotation.*;
+
+import AdvCloud.webapp.service.UserService;
+import AdvCloud.webapp.model.User;
+
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/v1/users")
 public class UserController {
 
-    private List<String> users = new ArrayList<>();
+    @Autowired
+    private UserService service;
 
     @GetMapping
-    public List<String> getAllUsers(){
-        return users;
+    public List<User> getAllUsers(){
+        return service.getAllUsers();
     }
 
     @PostMapping
-    public String createUser(@RequestBody String user){
-        users.add(user);
-        return "User created:" + user;
+    public User createUser(@RequestBody User user){
+        return service.saveUser(user);
     }
-
-    
     
 }

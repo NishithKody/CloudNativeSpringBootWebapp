@@ -1,7 +1,9 @@
 # Spring boot webapp
 
-## Steps to run
+## Important commands
 
+- install Dependencies
+- mvn install
 - Build the project and generate jar file
 - ./mvnw package (or) mvn package 
 - test webapp
@@ -24,3 +26,20 @@
 
 ### Reference
 https://www.docker.com/blog/kickstart-your-spring-boot-application-development/
+https://medium.com/@abhinavv.singh/implementing-user-authentication-in-a-spring-boot-application-a-detailed-step-by-step-guide-b15a9877569b
+
+https://dev.to/abhi9720/a-comprehensive-guide-to-jwt-authentication-with-spring-boot-117p
+
+https://medium.com/@tericcabrel/implement-jwt-authentication-in-a-spring-boot-3-application-5839e4fd8fac
+
+https://medium.com/javarevisited/spring-boot-securing-api-with-basic-authentication-bdd3ad2266f5
+
+https://howtodoinjava.com/spring-boot2/security-rest-basic-auth-example/
+
+https://medium.com/javarevisited/spring-boot-securing-api-with-basic-authentication-bdd3ad2266f5
+
+### Progress
+- Spring Boot rest API
+- User Auth
+- Containerize the app
+- Multi pod deployment
