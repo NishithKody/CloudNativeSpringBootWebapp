@@ -23,6 +23,10 @@
 - Collect information regarding the pod
 - kubectl describe pod 'podname'
 
+### Ops
+- MySQL image
+- docker run -d -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=taskdb --name mysqldb -p 3307:3306 mysql:8.0
+
 
 ### Reference
 https://www.docker.com/blog/kickstart-your-spring-boot-application-development/
@@ -43,3 +47,15 @@ https://medium.com/javarevisited/spring-boot-securing-api-with-basic-authenticat
 - User Auth
 - Containerize the app
 - Multi pod deployment
+
+### Todo
+- Auth
+- Validations
+
+## info
+- Deployed multi container pod with kubernetes
+
+# Learn
+- repo
+- security
+- jpa vs hibernate
