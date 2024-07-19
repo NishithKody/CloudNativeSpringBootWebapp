@@ -1,0 +1,28 @@
+Service
+
+
+Ingress
+
+
+volumes
+
+
+config
+view the current config
+k config view
+
+to know the current context
+k config --kubeconfig=<path> current-context
+
+to use context
+k config --kubeconfig=<path> use-context research
+
+the default config file is present at ~/.kube/config
+
+
+auth
+check access 
+k auth can-i create deployments --as <user> --namespace <namespace>
+
+get all resources
+kubectl api-resources

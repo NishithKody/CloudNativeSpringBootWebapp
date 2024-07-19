@@ -1,0 +1,2 @@
+get the count all of the lines
+wc -l
