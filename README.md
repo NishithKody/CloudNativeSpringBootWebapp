@@ -52,10 +52,22 @@ https://medium.com/javarevisited/spring-boot-securing-api-with-basic-authenticat
 - Auth
 - Validations
 
-## info
+### info
 - Deployed multi container pod with kubernetes
 
-# Learn
+### Learn
 - repo
 - security
 - jpa vs hibernate
+
+### troubleshooting
+docker image push error 
+docker login --username=your_username --email=name@email.com docker.io
+
+if it still does not work, tag your image with your userid
+
+docker build -t nishithkody0514/webapp:v2 .
+docker push nishithkody0514/webapp:v2  
+
+portforwarding - for local dev, to connect to a pod without a service, use port forwarding
+kubectl port-forward pod/webapp2 8080:8080
