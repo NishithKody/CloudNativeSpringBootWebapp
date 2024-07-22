@@ -22,6 +22,8 @@
 - kubectl apply -f service.yaml
 - Collect information regarding the pod
 - kubectl describe pod 'podname'
+- Start the deployment
+- kubectl apply -f .\deployment\deployment.yaml
 
 ### Ops
 - MySQL image
@@ -41,6 +43,8 @@ https://medium.com/javarevisited/spring-boot-securing-api-with-basic-authenticat
 https://howtodoinjava.com/spring-boot2/security-rest-basic-auth-example/
 
 https://medium.com/javarevisited/spring-boot-securing-api-with-basic-authentication-bdd3ad2266f5
+
+https://onairotich.medium.com/deploying-and-managing-application-with-kubernetes-16b37cd2c1e6
 
 ### Progress
 - Spring Boot rest API
@@ -71,3 +75,6 @@ docker push nishithkody0514/webapp:v2
 
 portforwarding - for local dev, to connect to a pod without a service, use port forwarding
 kubectl port-forward pod/webapp2 8080:8080
+
+service while using minikube
+minikube service webapp-service

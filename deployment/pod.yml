@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-    name: webapp2
+    name: webapp
 spec:
     containers:
     - name: webapp
