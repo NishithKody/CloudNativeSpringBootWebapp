@@ -24,6 +24,9 @@
 - kubectl describe pod 'podname'
 - Start the deployment
 - kubectl apply -f .\deployment\deployment.yaml
+- create the persistent volume, claim and secret
+- kubectl apply -f .\deployment\db-vol.yml
+- kubectl apply -f .\deployment\db-vol-claim.yml
 
 ### Ops
 - MySQL image
@@ -45,6 +48,10 @@ https://howtodoinjava.com/spring-boot2/security-rest-basic-auth-example/
 https://medium.com/javarevisited/spring-boot-securing-api-with-basic-authentication-bdd3ad2266f5
 
 https://onairotich.medium.com/deploying-and-managing-application-with-kubernetes-16b37cd2c1e6
+
+https://medium.com/@midejoseph24/deploying-mysql-on-kubernetes-16758a42a746
+
+https://medium.com/@kadimasam/kubernetes-storage-pv-pvc-and-storage-class-c107eba9c232
 
 ### Progress
 - Spring Boot rest API
