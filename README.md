@@ -27,6 +27,9 @@
 - create the persistent volume, claim and secret
 - kubectl apply -f .\deployment\db-vol.yml
 - kubectl apply -f .\deployment\db-vol-claim.yml
+- create and run a static nginx container (present in deployment/static)
+    -   docker build . -t simple-nginx 
+    -   docker run --name simple-nginx -d simple-nginx -p 8080:80
 
 ### Ops
 - MySQL image
