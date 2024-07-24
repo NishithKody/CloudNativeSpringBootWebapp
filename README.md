@@ -30,6 +30,14 @@
 - create and run a static nginx container (present in deployment/static)
     -   docker build . -t simple-nginx 
     -   docker run --name simple-nginx -d simple-nginx -p 8080:80
+- helm
+    - create a new helm chart
+    - helm create "chart name"
+    - install 
+    - helm install 'release-name' chartname (helm install web-chart webChart)
+    - list release
+    - helm list
+
 
 ### Ops
 - MySQL image
@@ -55,6 +63,12 @@ https://onairotich.medium.com/deploying-and-managing-application-with-kubernetes
 https://medium.com/@midejoseph24/deploying-mysql-on-kubernetes-16758a42a746
 
 https://medium.com/@kadimasam/kubernetes-storage-pv-pvc-and-storage-class-c107eba9c232
+
+https://spacelift.io/blog/kubernetes-ingress
+
+https://docs.vmware.com/en/VMware-Tanzu-Application-Catalog/services/tutorials/GUID-create-first-helm-chart-index.html
+
+https://medium.com/@seifeddinerajhi/an-in-depth-guide-to-building-a-helm-chart-from-the-ground-up-9eb8a1bbff21
 
 ### Progress
 - Spring Boot rest API
