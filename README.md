@@ -70,6 +70,10 @@ https://docs.vmware.com/en/VMware-Tanzu-Application-Catalog/services/tutorials/G
 
 https://medium.com/@seifeddinerajhi/an-in-depth-guide-to-building-a-helm-chart-from-the-ground-up-9eb8a1bbff21
 
+https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build
+
+https://spacelift.io/blog/terraform-aws-vpc
+
 ### Progress
 - Spring Boot rest API
 - User Auth
